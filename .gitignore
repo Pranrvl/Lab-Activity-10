@@ -1,0 +1,13 @@
+# Mengabaikan log dan cache bawaan
+/application/logs/*
+!/application/logs/index.html
+/application/cache/*
+!/application/cache/index.html
+
+# Jika menggunakan CodeIgniter 4
+.env
+/writable/*
+/vendor/
+
+# Mengabaikan file konfigurasi database lokal (opsional, agar aman)
+/application/config/development/
