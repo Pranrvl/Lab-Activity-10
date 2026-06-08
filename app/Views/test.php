@@ -29,11 +29,11 @@ echo "<h4>".$subtitle."</h4>";
         echo "<td>".$row['kode_prodi']."</td>";
         echo "<td><img src=".base_url('assets/mahasiswa/'.$row['foto'])." style=\"max-width:300px;\"/></td>";
         
-        // Tambahan baris untuk tombol Aksi (Edit & Delete)
+        // (Edit & Delete)
         echo "<td><button class=\"btn btn-success\">Edit</button> <button class=\"btn btn-danger\">Delete</button></td>";
 
         echo "</tr>";
     }   
     ?>
     </tbody>
-</table>
+</table>	

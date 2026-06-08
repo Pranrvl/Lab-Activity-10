@@ -41,4 +41,30 @@ class Validation extends BaseConfig
     // --------------------------------------------------------------------
     // Rules
     // --------------------------------------------------------------------
+
+    public $register = [
+        'username' => 'required',
+        'password' => 'required|min_length[6]|matches[password2]',
+        'password2' => 'required|min_length[6]',
+        'email'    => 'required|valid_email'
+    ];
+
+    public $register_errors = [
+        'username' => [
+            'required' => 'Username is required.'
+        ],
+        'password' => [
+            'required'   => 'Password is required.',
+            'min_length' => 'Your new password must contain at least 6 characters.',
+            'matches'    => "Your passwords don't match."
+        ],
+        'password2' => [
+            'required'   => 'Confirm Password is required.',
+            'min_length' => 'Your confirm password must contain at least 6 characters.'
+        ],
+        'email' => [
+            'required'    => 'Email is required.',
+            'valid_email' => 'Email is not valid.'
+        ]
+    ];
 }
